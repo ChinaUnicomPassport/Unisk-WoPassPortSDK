@@ -11,4 +11,37 @@
 https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/wo%2B%E9%80%9A%E8%A1%8C%E8%AF%81iOS%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8ESDK%E6%96%87%E6%A1%A3.pdf
 ### 2、andriod接入文档
 https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/wo%2B%E9%80%9A%E8%A1%8C%E8%AF%81Android%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8ESDK%E6%96%87%E6%A1%A3.doc
+# 适配iOS9
+由于iOS9添加了部分新特性，为了确保本SDK的正常使用，需要进行以下配置：
+### 1、添加对SSL的支持
+新的iOS9默认为网络连接建立TLS 1.2 SSL，可通过以下两种方式进行解决：
+- I.在info.plist中添加白名单
+- 
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>api.wo.cn</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
+
+- II.可将NSAllowsArbitraryLoads设置为YES
+-
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+### 2、bitcode
+我们将在后续的版本中添加对bitcode的支持。为了目前可以正常使用本SDK，需要设置编译标志ENABLE_BITCODE=NO
+
+
 
