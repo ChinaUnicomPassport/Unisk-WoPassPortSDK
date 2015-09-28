@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		018BB7561BA26E9C0082257C /* libWoPassOauthSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 018BB7551BA26E9C0082257C /* libWoPassOauthSDK.a */; };
+		016FCBE91BB90BE700B3A691 /* libWoPassOauthSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 016FCBE81BB90BE700B3A691 /* libWoPassOauthSDK.a */; settings = {ASSET_TAGS = (); }; };
 		01CB37F71B9EDF6D00A13536 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB37F61B9EDF6D00A13536 /* main.m */; };
 		01CB37FA1B9EDF6D00A13536 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB37F91B9EDF6D00A13536 /* AppDelegate.m */; };
 		01CB37FD1B9EDF6D00A13536 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB37FC1B9EDF6D00A13536 /* ViewController.m */; };
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		018BB7551BA26E9C0082257C /* libWoPassOauthSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWoPassOauthSDK.a; sourceTree = "<group>"; };
+		016FCBE81BB90BE700B3A691 /* libWoPassOauthSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWoPassOauthSDK.a; sourceTree = "<group>"; };
 		018BB7571BA26EB30082257C /* WPUAuthorizationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPUAuthorizationManager.h; sourceTree = "<group>"; };
 		01CB37F11B9EDF6D00A13536 /* WoPassOauthSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoPassOauthSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CB37F51B9EDF6D00A13536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CB38251B9EE09B00A13536 /* SystemConfiguration.framework in Frameworks */,
-				018BB7561BA26E9C0082257C /* libWoPassOauthSDK.a in Frameworks */,
+				016FCBE91BB90BE700B3A691 /* libWoPassOauthSDK.a in Frameworks */,
 				01CB38231B9EE08700A13536 /* libicucore.dylib in Frameworks */,
 				01CB38211B9EE07F00A13536 /* MobileCoreServices.framework in Frameworks */,
 			);
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				018BB7571BA26EB30082257C /* WPUAuthorizationManager.h */,
-				018BB7551BA26E9C0082257C /* libWoPassOauthSDK.a */,
+				016FCBE81BB90BE700B3A691 /* libWoPassOauthSDK.a */,
 				01CB381D1B9EE00400A13536 /* WPUResource.bundle */,
 			);
 			path = WoPassOauthSDKLib;
