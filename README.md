@@ -41,7 +41,7 @@ https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/w
         <true/>
     </dict>
 ### 2、bitcode
-我们将在后续的版本中添加对bitcode的支持。为了目前可以正常使用本SDK，需要设置编译标志ENABLE_BITCODE=NO
+添加了对bitcode的支持
 
 
 
