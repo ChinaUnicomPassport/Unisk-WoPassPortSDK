@@ -91,7 +91,7 @@ typedef void(^WPULoginPageWillAppearAction)(void);
                  accessPhoneNumberNeeded:(BOOL) isNeeded;
 
 /**
- *  自动授权，授权界面将在加载完毕后以弹窗的模式出现
+ *  自动授权，授权界面将在加载完毕后以弹窗的模式出现(若应用安全级别为0，则进行静默取号授权)
  *
  *  @param authorizeCompletedAction  授权完成的回调
  *  @param loginPageWillAppearAction 授权界面即将弹出的回调
