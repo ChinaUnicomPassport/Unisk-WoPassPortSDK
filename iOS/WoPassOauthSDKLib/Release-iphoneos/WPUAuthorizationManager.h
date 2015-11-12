@@ -68,7 +68,9 @@ typedef void(^WPULoginPageWillAppearAction)(void);
  *  @return manager对象
  */
 
-+ (instancetype)sharedManagerWithParams:(NSDictionary *)params options:(WPUAuthOptions)options delegate:(id)delegate;
++ (instancetype)sharedManagerWithParams:(NSDictionary *)params
+                                options:(WPUAuthOptions)options
+                               delegate:(id)delegate;
 
 /**
  *  获取manager对象
@@ -84,7 +86,9 @@ typedef void(^WPULoginPageWillAppearAction)(void);
  *  @param loginPageWillAppearAction 授权界面即将推出的回调
  *  @param isNeeded                  isNeeded = YES: 如果用户使用的是联通蜂窝网络, SDK将从网络层获取用户手机号码, 如果用户使用的是非联通蜂窝网络, SDK将不进行此项操作; isNeeded = NO: SDK将不进行取号操作
  */
-- (void)manualAuthorizationWithCompleted:(WPUAuthorizeCompletedAction) authorizeCompletedAction andLoginPageWillAppearAction:(WPULoginPageWillAppearAction)loginPageWillAppearAction accessPhoneNumberNeeded:(BOOL) isNeeded;
+- (void)manualAuthorizationWithCompleted:(WPUAuthorizeCompletedAction)authorizeCompletedAction
+            andLoginPageWillAppearAction:(WPULoginPageWillAppearAction)loginPageWillAppearAction
+                 accessPhoneNumberNeeded:(BOOL) isNeeded;
 
 /**
  *  自动授权，授权界面将在加载完毕后以弹窗的模式出现
@@ -93,7 +97,9 @@ typedef void(^WPULoginPageWillAppearAction)(void);
  *  @param loginPageWillAppearAction 授权界面即将弹出的回调
  *  @param timeInterval              在timeInterval间隔后调用此方法
  */
-- (void)autoAuthorizationWithCompleted:(WPUAuthorizeCompletedAction)authorizeCompletedAction andLoginPageWillAppearAction:(WPULoginPageWillAppearAction)loginPageWillAppearAction delayTimeInterval:(NSInteger)timeInterval;
+- (void)autoAuthorizationWithCompleted:(WPUAuthorizeCompletedAction)authorizeCompletedAction
+          andLoginPageWillAppearAction:(WPULoginPageWillAppearAction)loginPageWillAppearAction
+                     delayTimeInterval:(NSInteger)timeInterval;
 
 /**
  *  获取用户信息
@@ -101,6 +107,13 @@ typedef void(^WPULoginPageWillAppearAction)(void);
  *  @param getUserDataCompletedAction 用户信息获取完毕的回调
  */
 - (void)getUserDataWithCompletedAction:(WPUGetUserDataCompletedAction) getUserDataCompletedAction;
+
+/**
+ *  SSO handle
+ *
+ *  @param 应用被打开时传入的url
+ */
+- (void)handleURL:(NSURL *)url;
 
 /**
  *  清除授权信息
