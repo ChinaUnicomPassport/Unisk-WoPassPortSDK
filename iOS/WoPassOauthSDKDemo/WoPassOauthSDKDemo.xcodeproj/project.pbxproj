@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0107E6E91BF4670D0026F4E6 /* libWoPassOauthSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0107E6E81BF4670D0026F4E6 /* libWoPassOauthSDK.a */; };
+		0107E6EC1BF474D60026F4E6 /* WPUResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0107E6EB1BF474D60026F4E6 /* WPUResource.bundle */; };
 		01CB37F71B9EDF6D00A13536 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB37F61B9EDF6D00A13536 /* main.m */; };
 		01CB37FA1B9EDF6D00A13536 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB37F91B9EDF6D00A13536 /* AppDelegate.m */; };
 		01CB37FD1B9EDF6D00A13536 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB37FC1B9EDF6D00A13536 /* ViewController.m */; };
 		01CB38021B9EDF6D00A13536 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CB38011B9EDF6D00A13536 /* Images.xcassets */; };
 		01CB38051B9EDF6D00A13536 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB38031B9EDF6D00A13536 /* LaunchScreen.xib */; };
 		01CB38111B9EDF6D00A13536 /* WoPassOauthSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB38101B9EDF6D00A13536 /* WoPassOauthSDKDemoTests.m */; };
-		01CB381F1B9EE00400A13536 /* WPUResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01CB381D1B9EE00400A13536 /* WPUResource.bundle */; };
 		01CB38211B9EE07F00A13536 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CB38201B9EE07F00A13536 /* MobileCoreServices.framework */; };
 		01CB38231B9EE08700A13536 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CB38221B9EE08700A13536 /* libicucore.dylib */; };
 		01CB38251B9EE09B00A13536 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CB38241B9EE09B00A13536 /* SystemConfiguration.framework */; };
@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0107E6E81BF4670D0026F4E6 /* libWoPassOauthSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWoPassOauthSDK.a; sourceTree = "<group>"; };
 		0107E6EA1BF4671B0026F4E6 /* WPUAuthorizationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPUAuthorizationManager.h; sourceTree = "<group>"; };
+		0107E6EB1BF474D60026F4E6 /* WPUResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WPUResource.bundle; sourceTree = "<group>"; };
 		01CB37F11B9EDF6D00A13536 /* WoPassOauthSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoPassOauthSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CB37F51B9EDF6D00A13536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01CB37F61B9EDF6D00A13536 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		01CB380A1B9EDF6D00A13536 /* WoPassOauthSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoPassOauthSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CB380F1B9EDF6D00A13536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01CB38101B9EDF6D00A13536 /* WoPassOauthSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoPassOauthSDKDemoTests.m; sourceTree = "<group>"; };
-		01CB381D1B9EE00400A13536 /* WPUResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WPUResource.bundle; sourceTree = "<group>"; };
 		01CB38201B9EE07F00A13536 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		01CB38221B9EE08700A13536 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		01CB38241B9EE09B00A13536 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -140,7 +140,7 @@
 			children = (
 				0107E6EA1BF4671B0026F4E6 /* WPUAuthorizationManager.h */,
 				0107E6E81BF4670D0026F4E6 /* libWoPassOauthSDK.a */,
-				01CB381D1B9EE00400A13536 /* WPUResource.bundle */,
+				0107E6EB1BF474D60026F4E6 /* WPUResource.bundle */,
 			);
 			path = WoPassOauthSDKLib;
 			sourceTree = "<group>";
@@ -226,8 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CB38051B9EDF6D00A13536 /* LaunchScreen.xib in Resources */,
-				01CB381F1B9EE00400A13536 /* WPUResource.bundle in Resources */,
 				01CB38021B9EDF6D00A13536 /* Images.xcassets in Resources */,
+				0107E6EC1BF474D60026F4E6 /* WPUResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
