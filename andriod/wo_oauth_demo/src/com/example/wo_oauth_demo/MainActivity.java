@@ -39,10 +39,26 @@ OnClickListener {
 private Button btn_start_manual, btn_user_info,
 	      btn_start_automatic,btn_clear_cache;
 private TextView tv_show;
-private String CLIENT_ID = "unisk";
-private String CLIENT_SECRET = "UNISK";
-public static final String OAUTH_CALLBACK_URL = "http://www.unisk.cn";
 
+
+
+
+
+private String CLIENT_ID = "b61a4b2bf76c4b3bb02097a18a5764c3";
+private String CLIENT_SECRET = "accb90eaea6241e2ba835a28700bf4ce";
+public static final String OAUTH_CALLBACK_URL = "http://www.wobendi.com/";
+
+//private String CLIENT_ID = "unisk";
+//private String CLIENT_SECRET = "UNISK";
+//public static final String OAUTH_CALLBACK_URL = "http://www.unisk.cn";
+
+
+////////用户申请的client_id
+//private String CLIENT_ID = "abc";
+////用户申请的client_secret
+//private String CLIENT_SECRET = "123";
+//// 重定向url
+//public static final String OAUTH_CALLBACK_URL = "http://www.anywhere";
 
 int type = 0;
 private Context context;
@@ -77,6 +93,8 @@ btn_start_manual.setOnClickListener(this);
 btn_user_info.setOnClickListener(this);
 btn_clear_cache.setOnClickListener(this);
 btn_start_automatic.setOnClickListener(this);
+
+
 }
 
 @Override
@@ -106,7 +124,9 @@ case R.id.btn_clear_cache:
 
 }
 
-
+/**
+* 
+*/
 private void manualAuthorizationMode() {
 WogarOAuth wogarOauth = new WogarOAuth(context);
 int screenWidth = getWindowManager().getDefaultDisplay().getWidth(); 
@@ -144,9 +164,23 @@ float screenWidth = (float) (getWindowManager().getDefaultDisplay()
 float screenHeight = (float) (getWindowManager().getDefaultDisplay()
 		.getHeight() * 0.5);
 WogarOAuth wogarOauth = new WogarOAuth(context);
+boolean b=wogarOauth.fetchOauth();
+//if(!b){
+//	Intent i = new Intent(); 
+//	ComponentName cn = new ComponentName("com.unicom.wopluslife", 
+//	"com.unicom.wopluslife.activity.LaunchActivity"); 
+//	i.setComponent(cn); 
+//	startActivityForResult(i, RESULT_OK); 
+//}else{
+//	Uri uri = Uri.parse("market://details?id=com.unicom.wopluslife");//id为包名 
+//	Intent it = new Intent(Intent.ACTION_VIEW, uri); 
+//	startActivity(it); 
+//}
+
 String state = wogarOauth.automaticAuthorizeMode(this, screenWidth,
 		screenHeight, delaytime);
 tv_show.setText(state);//这里主要是自动模式，返回的状态
+
 }
 
 public void processAccessToken(String jsonStr) {
@@ -164,6 +198,7 @@ try {
 }
 }
 
+
 public void processAutomatic(String message) {
 access_token = message.split("&")[0].split("=")[1];
 token_type = message.split("&")[1].split("=")[1];
@@ -171,6 +206,7 @@ expires_in = message.split("&")[2].split("=")[1];
 openid = message.split("&")[3].split("=")[1];
 
 }
+
 
 public void clearCache() {
 tv_show.setText("......");
@@ -183,25 +219,18 @@ error = "";
 errorDescription = "";
 }
 
+
 @Override
 protected void onPause() {
-// TODO Auto-generated method stub
 super.onPause();
 tv_show.setText("......");
 }
 
 @Override
 protected void onResume() {
-// TODO Auto-generated method stub
 super.onResume();
 tv_show.setText("......");
 }
-
-
-
-
-
-
 
 
 @Override
@@ -219,6 +248,9 @@ tv_show.setText("..."+message);
 @Override
 public void onMongoliaLayerFinish() {
 tv_show.setText("......");
+
 }
+
+
 
 }

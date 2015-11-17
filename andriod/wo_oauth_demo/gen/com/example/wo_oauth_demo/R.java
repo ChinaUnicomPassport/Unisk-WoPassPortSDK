@@ -21,21 +21,32 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int login_btn=0x7f020001;
-        public static final int login_btn_selected=0x7f020002;
-        public static final int login_btn_selecter=0x7f020003;
+        public static final int dialog_bg=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int icon_loading=0x7f020002;
+        public static final int icon_loading2=0x7f020003;
+        public static final int login_btn=0x7f020004;
+        public static final int login_btn_selected=0x7f020005;
+        public static final int login_btn_selecter=0x7f020006;
+        public static final int poo_bg=0x7f020007;
+        public static final int progress_small_bar=0x7f020008;
+        public static final int refresh_view_bg=0x7f020009;
+        public static final int shape=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f080005;
+        public static final int action_settings=0x7f080008;
+        public static final int animation_top_left=0x7f080007;
         public static final int btn_clear_cache=0x7f080003;
         public static final int btn_start_automatic=0x7f080000;
         public static final int btn_start_manual=0x7f080001;
         public static final int btn_user_info=0x7f080002;
+        public static final int home_rl=0x7f080005;
+        public static final int rl=0x7f080006;
         public static final int tv_show=0x7f080004;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int dialog=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f070000;
