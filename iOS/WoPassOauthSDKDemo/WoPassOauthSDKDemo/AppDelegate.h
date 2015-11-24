@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  WoPassOauthSDKDemo
+//  WoPassOauth
 //
-//  Created by htz on 15/9/8.
+//  Created by htz on 15/6/23.
 //  Copyright (c) 2015年 unisk. All rights reserved.
 //
 

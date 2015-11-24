@@ -1,13 +1,14 @@
 //
 //  ViewController.m
-//  WoPassOauthSDKDemo
+//  WoPassOauth
 //
-//  Created by htz on 15/9/8.
+//  Created by htz on 15/6/23.
 //  Copyright (c) 2015年 unisk. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WPUViewController.h"
 #import "WPUAuthorizationManager.h"
+#import "WPUChangeInfoViewController.h"
 
 
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
@@ -16,13 +17,15 @@
 #define kLabelH 50
 #define kLabelW 250
 
-@interface ViewController ()
+@interface WPUViewController ()
 
 @property (nonatomic, strong)UILabel *statusLabel;
 
 @end
 
-@implementation ViewController
+@implementation WPUViewController
+
+#pragma mark - Constructors and Life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,21 +37,23 @@
 }
 
 
-- (UILabel *)statusLabel {
-    if (!_statusLabel) {
-        _statusLabel = [[UILabel alloc] init];
-        _statusLabel.frame = CGRectMake((SCREEN_WIDTH - kLabelW) / 2, 450, kLabelW, kLabelH);
-        _statusLabel.backgroundColor = [UIColor lightGrayColor];
-        _statusLabel.textColor = [UIColor blackColor];
-        _statusLabel.textAlignment = NSTextAlignmentCenter;
-        [self.view addSubview:_statusLabel];
-    }
-    return _statusLabel;
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+
+
+
+#pragma mark - Private Method
 
 - (void)setupButton {
     
-    NSArray *titleArray = @[@"主动授权模式", @"自动授权模式", @"获取用户信息", @"清除登录信息"];
+    NSArray *titleArray = @[@"主动授权模式", @"自动授权模式", @"获取用户信息", @"清除登录信息", @"修改APPID APPSecret"];
     for (NSInteger i = 0; i < titleArray.count; i ++) {
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -57,21 +62,32 @@
         [button sizeToFit];
         button.tag = i;
         [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-        button.frame = CGRectMake((SCREEN_WIDTH - button.frame.size.width) / 2, (100 * i) + 50, button.frame.size.width * 1.2, button.frame.size.height * 1.2);
+        button.frame = CGRectMake((SCREEN_WIDTH - button.frame.size.width * 1.2) / 2, (80 * i) + 50, button.frame.size.width * 1.2, button.frame.size.height * 1.2);
         button.backgroundColor = [UIColor orangeColor];
         button.layer.cornerRadius = 7;
         button.layer.masksToBounds = YES;
     }
 }
 
+
+
+#pragma mark - Event Reponse
+
+
+
 - (void)clickButton:(UIButton *)button {
     
     __weak typeof(self) weakSelf = self;
-    self.statusLabel.text = @"等待响应...";
+    
+    if (button.tag < 4) {
+        
+        self.statusLabel.text = @"等待响应...";
+    }
+    
     switch (button.tag) {
         case 0: {
             
-            button.userInteractionEnabled = NO;
+            button.userInteractionEnabled = YES;
             
             [[WPUAuthorizationManager sharedManager] manualAuthorizationWithCompleted:^(id authInfo, NSString *msg) {
                 
@@ -89,7 +105,7 @@
             break;
         case 1: {
             
-            button.userInteractionEnabled = NO;
+            button.userInteractionEnabled = YES;
             
             [[WPUAuthorizationManager sharedManager] autoAuthorizationWithCompleted:^(id authInfo, NSString *msg) {
                 
@@ -107,8 +123,8 @@
             break;
         case 2: {
             
-            button.userInteractionEnabled = NO;
-            [[WPUAuthorizationManager sharedManager] getUserDataWithCompletedAction:^(id userData, id authInfo, NSString *msg) {
+            button.userInteractionEnabled = YES;
+            [[WPUAuthorizationManager sharedManager] getUserDataWithCompletedAction:^(id userData, id authInfo,NSString *msg) {
                 
                 button.userInteractionEnabled = YES;
                 NSLog(@"%@", userData);
@@ -119,25 +135,42 @@
         }
             break;
         case 3: {
-            
+            button.userInteractionEnabled = YES;
             [[WPUAuthorizationManager sharedManager] clearAuthInfo];
             self.statusLabel.text = @"授权信息清除成功";
         }
             break;
+            
+        case 4: {
+            
+            button.userInteractionEnabled = YES;
+            WPUChangeInfoViewController *vc = [[WPUChangeInfoViewController alloc] init];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
             
         default:
             break;
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
+
+#pragma mark - Delegate
+
+
+#pragma mark - Getter and Setter
+
+- (UILabel *)statusLabel {
+    if (!_statusLabel) {
+        _statusLabel = [[UILabel alloc] init];
+        _statusLabel.frame = CGRectMake((SCREEN_WIDTH - kLabelW) / 2, 450, kLabelW, kLabelH);
+        _statusLabel.backgroundColor = [UIColor lightGrayColor];
+        _statusLabel.textColor = [UIColor blackColor];
+        _statusLabel.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:_statusLabel];
+    }
+    return _statusLabel;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
 
 @end

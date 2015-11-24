@@ -80,6 +80,18 @@ typedef void(^WPULoginPageWillAppearAction)(void);
 + (instancetype)sharedManager;
 
 /**
+ *  设置manager对象
+ *
+ *  @param params   授权参数列表
+ *  @param options  授权模式选项。warning: 简化模式不支持过期自动刷新
+ *
+ *  @return manager对象
+ */
+
+- (instancetype)setWithAuthParams:(NSDictionary *)params
+                          options:(WPUAuthOptions)options;
+
+/**
  *  手动授权，授权界面将在加载完毕后以modal的方式推出
  *
  *  @param authorizeCompletedAction  授权完成的回调
@@ -91,7 +103,7 @@ typedef void(^WPULoginPageWillAppearAction)(void);
                  accessPhoneNumberNeeded:(BOOL) isNeeded;
 
 /**
- *  自动授权，授权界面将在加载完毕后以弹窗的模式出现
+ *  自动授权，授权界面将在加载完毕后以弹窗的模式出现(若应用安全级别为0，则进行静默取号授权)需要在蜂窝网环境下调用，默认进行取号
  *
  *  @param authorizeCompletedAction  授权完成的回调
  *  @param loginPageWillAppearAction 授权界面即将弹出的回调
