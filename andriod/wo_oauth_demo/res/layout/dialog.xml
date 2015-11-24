@@ -1,8 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="#00ffffff"
+    android:paddingRight="30dp"
+      android:paddingLeft="30dp"
     android:id="@+id/home_rl"
     >
     
@@ -11,6 +13,7 @@
            android:layout_width="fill_parent"
            android:layout_height="70dp"
            android:background="@drawable/shape"
+       
         >
           <ImageView
              android:id="@+id/animation_top_left"
@@ -21,12 +24,13 @@
              android:background="@drawable/progress_small_bar"
              />
           
+          
           <TextView 
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_below="@+id/animation_top_left"
              android:layout_centerHorizontal="true"
-              android:layout_marginTop="10dp"
+              android:layout_marginTop="5dp"
               android:textColor="#ffffffff"
              android:text="Wo+通行证正在登录..."
               /> 
