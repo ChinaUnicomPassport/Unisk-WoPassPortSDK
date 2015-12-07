@@ -10,7 +10,7 @@
 ### 1、iOS接入文档
 https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/wo%2B%E9%80%9A%E8%A1%8C%E8%AF%81iOS%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8ESDK%E6%96%87%E6%A1%A3.pdf
 ### 2、andriod接入文档
-https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/wo%2B%E9%80%9A%E8%A1%8C%E8%AF%81Android%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8ESDK%E6%96%87%E6%A1%A3.doc
+https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/wo%2B通行证Android平台说明SDK文档.docx
 # 适配iOS9
 由于iOS9添加了部分新特性，为了确保本SDK的正常使用，需要进行以下配置：
 ### 1、添加对SSL的支持
