@@ -8,7 +8,7 @@
 | redirect_uri   | 第三方申请时填写的回调地址。| 
 # 接入文档
 ### 1、iOS接入文档
-https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/wo%2B%E9%80%9A%E8%A1%8C%E8%AF%81iOS%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8ESDK%E6%96%87%E6%A1%A3.pdf
+https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/wo%2B通行证iOS平台说明SDK文档.pdf
 ### 2、andriod接入文档
 https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/wo%2B通行证Android平台说明SDK文档.pdf
 # 适配iOS9
