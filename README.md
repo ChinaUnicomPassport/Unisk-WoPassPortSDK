@@ -40,8 +40,17 @@ https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/w
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
-### 2、bitcode
-添加了对bitcode的支持
 
+### 2、添加对应用跳转的支持
+在info.plist中的LSApplicationQueriesSchemes加入woPassPort，如下：
+
+-
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>woPassPort</string>
+    </array>
+
+### 3、bitcode
+添加了对bitcode的支持
 
 
