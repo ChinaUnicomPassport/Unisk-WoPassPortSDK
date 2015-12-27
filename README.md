@@ -3,9 +3,14 @@
 # 名词解释
 | 名词        | 说明    | 
 | --------    | :-----  | 
+| NET取号          |通过运营商移动⺴络自动取号。|
+| 隐式登录          |SDK在后台进⾏NET取号,取到手机号后以alert形式弹出loading,并进行授权,授权成功后loading消失,用户不参与交互。若取号失败不进⾏行弹窗。|
+|一键登录           |SDK在后台进⾏NET取号,取到手机号后以alert形式弹出授权⻚面,⽤户确认登录后授权成功。若取号失败则不进⾏行弹窗。|
+|验证登录           |SDK在后台进⾏NET取号,不论取号成功与否,登录界⾯面都将以modal的形式推出。|
 | client_id      | 第三方申请到的AppKey。|
 | client_secret  | 第三方申请到的AppSecret。|
 | redirect_uri   | 第三方申请时填写的回调地址。| 
+
 # 接入文档
 ### 1、iOS接入文档
 https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/wo%2B通行证iOS平台说明SDK文档.pdf
