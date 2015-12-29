@@ -13,7 +13,7 @@
 
 # 接入文档
 ### 1、iOS接入文档
-https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/wo%2B通行证iOS平台说明SDK文档.pdf
+https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/沃通行证iOS平台说明SDK文档.pdf
 ### 2、andriod接入文档
 https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/wo%2B通行证Android平台说明SDK文档.pdf
 # 适配iOS9
