@@ -92,7 +92,7 @@ typedef void(^WPULoginPageWillAppearAction)(void);
                           options:(WPUAuthOptions)options;
 
 /**
- *  手动授权，授权界面将在加载完毕后以modal的方式推出
+ *  验证授权
  *
  *  @param authorizeCompletedAction  授权完成的回调
  *  @param loginPageWillAppearAction 授权界面即将推出的回调
@@ -103,7 +103,7 @@ typedef void(^WPULoginPageWillAppearAction)(void);
                  accessPhoneNumberNeeded:(BOOL) isNeeded;
 
 /**
- *  自动授权，授权界面将在加载完毕后以弹窗的模式出现(若应用安全级别为0，则进行静默取号授权)需要在蜂窝网环境下调用，默认进行取号
+ *  按级别授权
  *
  *  @param authorizeCompletedAction  授权完成的回调
  *  @param loginPageWillAppearAction 授权界面即将弹出的回调

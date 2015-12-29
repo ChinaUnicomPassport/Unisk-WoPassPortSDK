@@ -59,7 +59,7 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:titleArray[i] forState:UIControlStateNormal];
         [self.view addSubview:button];
-        [button sizeToFit];
+        button.frame = CGRectMake(0, 0, 170, 40);
         button.tag = i;
         [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
         button.frame = CGRectMake((SCREEN_WIDTH - button.frame.size.width * 1.2) / 2, (80 * i) + 50, button.frame.size.width * 1.2, button.frame.size.height * 1.2);
