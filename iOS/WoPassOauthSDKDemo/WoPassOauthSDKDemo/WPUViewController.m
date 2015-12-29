@@ -53,7 +53,7 @@
 
 - (void)setupButton {
     
-    NSArray *titleArray = @[@"主动授权模式", @"自动授权模式", @"获取用户信息", @"清除登录信息", @"修改APPID APPSecret"];
+    NSArray *titleArray = @[@"验证授权", @"按级别授权", @"获取用户信息", @"清除登录信息", @"修改APPID APPSecret"];
     for (NSInteger i = 0; i < titleArray.count; i ++) {
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
