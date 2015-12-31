@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+   >
+
+    <EditText
+        android:id="@+id/et_client_id"
+        android:hint="client_id"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/et_client_secret"
+        android:hint="client_secret"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp" />
+    <EditText
+        android:id="@+id/et_client_url"
+        android:hint="redirect_uri"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="20dp"
+
+        android:layout_height="50dp" />
+    <EditText
+        android:id="@+id/et_client_option"
+        android:hint="authOption"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:textColor="#ffffffff"
+        android:background="@drawable/login_btn_selecter"
+        android:text="ok"
+        android:layout_height="50dp" />
+</LinearLayout>

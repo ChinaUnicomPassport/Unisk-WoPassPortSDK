@@ -15,7 +15,7 @@
 ### 1、iOS接入文档
 https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/iOS/沃通行证iOS平台说明SDK文档.pdf
 ### 2、andriod接入文档
-https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/wo%2B通行证Android平台说明SDK文档.pdf
+https://github.com/ChinaUnicomPassport/Unisk-WoPassPortSDK/blob/master/andriod/中国联通沃登录Android平台说明SDK文档1231.pdf
 # 适配iOS9
 由于iOS9添加了部分新特性，为了确保本SDK的正常使用，需要进行以下配置：
 ### 1、添加对SSL的支持
