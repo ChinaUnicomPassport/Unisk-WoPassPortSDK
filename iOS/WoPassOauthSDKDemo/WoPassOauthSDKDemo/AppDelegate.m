@@ -25,21 +25,6 @@
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     self.window.rootViewController = [[WPUViewController alloc] init];
     [self.window makeKeyAndVisible];
-    
-//     level 0
-
-//    self.authManager = [WPUAuthorizationManager sharedManagerWithParams:@{
-//                                                                          @"client_id" : @"abc",
-//                                                                          @"redirect_uri" :     @"http://www.anywhere",
-//                                                                          @"client_secret" : @"123"
-//                                                                          } options:WPUAuthImplicit delegate:self];
-    
-
-//     level 2
-//    self.authManager = [WPUAuthorizationManager sharedManagerWithParams:@{
-//                                                                          @"client_id" : @"0E6E5A4747B5BF9E",
-//                                                                          @"redirect_uri" :     @"http://www.anywhere"
-//                                                                          } options:WPUAuthImplicit delegate:self];
 
 //    level 1
     self.authManager = [WPUAuthorizationManager sharedManagerWithParams:@{
@@ -49,11 +34,7 @@
                                                                           } options:WPUAuthCode delegate:self];
     
     
-//    // 云盘
-//    self.authManager = [WPUAuthorizationManager sharedManagerWithParams:@{
-//                                                                          @"client_id" : @"78e696134d334befa4ca651270ed1037",
-//                                                                          @"redirect_uri" :     @"http://www.wocloud.com.cn/"
-//                                                                          } options:WPUAuthImplicit delegate:self];
+
 
     return YES;
 }
